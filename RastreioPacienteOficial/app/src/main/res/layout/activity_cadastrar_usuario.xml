@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CadastrarUsuario">
+
+    <TextView
+            android:text="E-mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emailTextCardastro"
+            app:layout_constraintStart_toStartOf="@+id/senha" android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/senha"/>
+    <TextView
+            android:text="Senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/senhaLabelCardastro"
+            app:layout_constraintStart_toStartOf="@+id/nome" android:layout_marginTop="19dp"
+            app:layout_constraintTop_toBottomOf="@+id/nome"/>
+    <TextView
+            android:text="Cardastre-se"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardastre_seLabel" android:textSize="24sp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="Nome de Login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelLoginCardastro"
+            android:layout_marginTop="46dp"
+            app:layout_constraintTop_toBottomOf="@+id/cardastre_seLabel" android:layout_marginEnd="79dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardastre_seLabel"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/login_usuario"
+            app:layout_constraintStart_toStartOf="@+id/labelLoginCardastro" android:layout_marginTop="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/labelLoginCardastro"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/nome"
+            app:layout_constraintStart_toStartOf="@+id/labelNomeCardastro"
+            app:layout_constraintTop_toBottomOf="@+id/labelNomeCardastro"/>
+    <TextView
+            android:text="Nome Completo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelNomeCardastro"
+            app:layout_constraintStart_toStartOf="@+id/login_usuario" android:layout_marginTop="19dp"
+            app:layout_constraintTop_toBottomOf="@+id/login_usuario"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/senha"
+            app:layout_constraintStart_toStartOf="@+id/senhaLabelCardastro" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/senhaLabelCardastro"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/email"
+            app:layout_constraintStart_toStartOf="@+id/emailTextCardastro" android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/emailTextCardastro"/>
+    <TextView
+            android:text="Credicial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/credencialLabelCardastro"
+            app:layout_constraintStart_toStartOf="@+id/email" android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/email"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/credencial"
+            app:layout_constraintStart_toStartOf="@+id/credencialLabelCardastro" android:layout_marginTop="11dp"
+            app:layout_constraintTop_toBottomOf="@+id/credencialLabelCardastro"/>
+    <Button
+            android:text="Cadastrar "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cadastrarUsuario"
+            android:layout_marginTop="43dp"
+            app:layout_constraintTop_toBottomOf="@+id/credencial" android:layout_marginEnd="3dp"
+            app:layout_constraintEnd_toEndOf="@+id/credencial"/>
+</android.support.constraint.ConstraintLayout>

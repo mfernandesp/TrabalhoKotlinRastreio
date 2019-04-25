@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/username"
+            app:layout_constraintStart_toStartOf="@+id/labelNome" android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@+id/labelNome"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/password"
+            app:layout_constraintStart_toStartOf="@+id/labelSenha" android:layout_marginTop="14dp"
+            android:layout_marginStart="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/labelSenha"/>
+    <Button
+            android:text="Entrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/entrar"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/password" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.718"/>
+
+    <TextView
+            android:text="Usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelNome" android:layout_marginTop="38dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" android:layout_marginEnd="123dp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"/>
+    <TextView
+            android:text="Senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/labelSenha"
+            app:layout_constraintStart_toStartOf="@+id/username" android:layout_marginTop="17dp"
+            app:layout_constraintTop_toBottomOf="@+id/username"/>
+    <ImageView
+            android:layout_width="161dp"
+            android:layout_height="156dp" app:srcCompat="@drawable/icone_5" tools:srcCompat="@drawable/icone_5"
+            android:id="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="88dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.468"/>
+
+    <Button
+            android:text="Cadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cadastraruser" android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/password" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.322"/>
+
+</android.support.constraint.ConstraintLayout>
