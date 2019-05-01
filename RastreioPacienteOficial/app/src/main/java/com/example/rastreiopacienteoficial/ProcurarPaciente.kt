@@ -7,10 +7,7 @@ import android.content.SharedPreferences
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
 import com.example.rastreiopaciente.Banco.Banco
 import com.example.rastreiopaciente.Banco.Paciente
 
@@ -27,36 +24,24 @@ class ProcurarPaciente : AppCompatActivity() {
 
         listaPaciente = findViewById<ListView>(R.id.listViewPesquisa)
 
-        var adapter: ArrayAdapter<String>
-
-        var selectBanco: List<Paciente>
-        selectBanco = banco.pacienteCrud().listarPacientes()
 
 
-        var dado: MutableList<String> = ArrayList()
+        var adapterPaciente = PacienteAdapter(context = this.applicationContext, act = this)
+        listaPaciente.adapter = adapterPaciente
 
-        for(paciente in selectBanco) {
-            dado.add(paciente.nome!!)
-        }
-
-        adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1, dado)
-
-        listaPaciente.adapter = adapter
 
         listaPaciente.setOnItemClickListener{parent: AdapterView<*>?, view: View?, position: Int, id: Long ->
-            var paciente = banco.pacienteCrud().getIdPaciente(listaPaciente.getItemAtPosition(position).toString())
+            var id_paciente = view?.findViewById<TextView>(R.id.lista_id_paciente)?.text.toString()
+            var nome = view?.findViewById<TextView>(R.id.lista_nome_paciente)?.text.toString()
             val sharedPreferences: SharedPreferences = getSharedPreferences("rastreiopacienteoficial", Context.MODE_PRIVATE)
             val editor = sharedPreferences.edit()
-            editor.putString("paciente_nome", paciente.nome)
-            editor.putString("paciente_id", paciente.id_paciente.toString())
+            editor.putString("paciente_nome", nome)
+            editor.putString("paciente_id",id_paciente)
             editor.apply()
-            Toast.makeText(this, "Paciente ${paciente.nome} escolhido.", Toast.LENGTH_LONG).show()
-          //  Toast.makeText(this, "Paciente id ${id} escolhido.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Paciente ${nome} escolhido.", Toast.LENGTH_LONG).show()
             startActivity(Intent(this, TelaSelecaoOpccao::class.java))
             finish()
-
         }
 
-       // paciente.id_paciente!!,
     }
 }
