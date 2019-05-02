@@ -27,7 +27,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/cardastre_seLabel" android:textSize="24sp"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginTop="40dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"/>
     <TextView
             android:text="Nome de Login"
             android:layout_width="wrap_content"

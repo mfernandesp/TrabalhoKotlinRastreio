@@ -1,4 +1,4 @@
-package com.example.rastreiopacienteoficial.Banco
+package com.example.rastreiopacienteoficial
 
 import android.app.Activity
 import android.arch.persistence.room.Room
@@ -9,7 +9,6 @@ import android.content.SharedPreferences
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.rastreiopaciente.Banco.Banco
-import com.example.rastreiopacienteoficial.R
 
 class AtendimentoAdapter(var context: Context, var act: Activity)  : BaseAdapter() {
 

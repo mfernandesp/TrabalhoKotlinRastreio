@@ -49,7 +49,7 @@
             app:layout_constraintTop_toBottomOf="@+id/username"/>
     <ImageView
             android:layout_width="161dp"
-            android:layout_height="156dp" app:srcCompat="@drawable/icone_5" tools:srcCompat="@drawable/icone_5"
+            android:layout_height="156dp" app:srcCompat="@drawable/icone_do_app" tools:srcCompat="@drawable/icone_do_app"
             android:id="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="88dp" app:layout_constraintEnd_toEndOf="parent"

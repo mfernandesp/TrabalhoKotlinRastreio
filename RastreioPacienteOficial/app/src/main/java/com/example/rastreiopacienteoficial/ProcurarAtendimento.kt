@@ -8,9 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
-import com.example.rastreiopaciente.Banco.Atendimento
 import com.example.rastreiopaciente.Banco.Banco
-import com.example.rastreiopacienteoficial.Banco.AtendimentoAdapter
 
 class ProcurarAtendimento : AppCompatActivity() {
 
@@ -22,13 +20,12 @@ class ProcurarAtendimento : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_procurar_atendimento)
 
-        val sharedPreferences: SharedPreferences = getSharedPreferences("rastreiopacienteoficial", Context.MODE_PRIVATE)
-
         banco = Room.databaseBuilder(applicationContext, Banco::class.java, "RastreioPaciente").allowMainThreadQueries().build()
 
         listaAtendimento = findViewById<ListView>(R.id.listViewPesquisaAtendimento)
 
-        var adapterAtendimento = AtendimentoAdapter(context = this.applicationContext, act = this)
+        var adapterAtendimento =
+            AtendimentoAdapter(context = this.applicationContext, act = this)
         listaAtendimento.adapter = adapterAtendimento
 
         listaAtendimento.setOnItemClickListener{ parent: AdapterView<*>?, view: View?, position: Int, id: Long ->

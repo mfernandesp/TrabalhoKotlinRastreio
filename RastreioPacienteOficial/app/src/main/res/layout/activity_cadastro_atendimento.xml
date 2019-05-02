@@ -12,90 +12,87 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/criarAtedimentoLabel" android:textSize="24sp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp" android:layout_marginStart="61dp"
-            android:layout_marginBottom="84dp" app:layout_constraintBottom_toTopOf="@+id/dataAtendimentoLabel"/>
+            android:layout_marginTop="55dp"
+            android:layout_marginBottom="439dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/obstextAtendimento" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
     <TextView
             android:text="Data de chegada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dataAtendimentoLabel"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="33dp" app:layout_constraintTop_toBottomOf="@+id/criarAtedimentoLabel"
-            android:layout_marginBottom="9dp" app:layout_constraintBottom_toTopOf="@+id/dataChegadaAtendimento"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="123dp" android:layout_marginStart="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/dataChegadaAtendimento"/>
     <EditText
-            android:layout_width="0dp"
+            android:layout_width="173dp"
             android:layout_height="0dp"
             android:inputType="date"
             android:ems="10"
             android:id="@+id/dataChegadaAtendimento"
-            app:layout_constraintTop_toBottomOf="@+id/dataAtendimentoLabel" android:layout_marginBottom="27dp"
-            app:layout_constraintEnd_toEndOf="@+id/medicacaoAtendimento"
-            app:layout_constraintBottom_toTopOf="@+id/tipoDoençaLabel" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="34dp" android:layout_marginEnd="35dp"
-    />
+            app:layout_constraintStart_toStartOf="@+id/dataAtendimentoLabel"
+            app:layout_constraintTop_toBottomOf="@+id/dataAtendimentoLabel" android:layout_marginBottom="17dp"
+            app:layout_constraintBottom_toTopOf="@+id/tipoDoençaLabel"/>
     <TextView
             android:text="Doença"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tipoDoençaLabel"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="34dp" app:layout_constraintTop_toBottomOf="@+id/dataChegadaAtendimento"
-            android:layout_marginBottom="11dp" app:layout_constraintBottom_toTopOf="@+id/doencaNomeAtendimento"/>
+            app:layout_constraintStart_toStartOf="@+id/doencaNomeAtendimento"
+            android:layout_marginStart="1dp" app:layout_constraintTop_toBottomOf="@+id/dataChegadaAtendimento"
+            app:layout_constraintBottom_toTopOf="@+id/doencaNomeAtendimento"/>
     <EditText
-            android:layout_width="0dp"
+            android:layout_width="196dp"
             android:layout_height="0dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/doencaNomeAtendimento"
-            app:layout_constraintTop_toBottomOf="@+id/tipoDoençaLabel" android:layout_marginBottom="17dp"
-            app:layout_constraintEnd_toEndOf="@+id/medicacaoAtendimento"
-            app:layout_constraintBottom_toTopOf="@+id/medicacaoLabel"
-            app:layout_constraintStart_toStartOf="@+id/tipoDoençaLabel" android:layout_marginEnd="4dp"
-    />
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="34dp" app:layout_constraintTop_toBottomOf="@+id/tipoDoençaLabel"
+            android:layout_marginBottom="32dp" app:layout_constraintBottom_toTopOf="@+id/medicacaoAtendimento"/>
     <TextView
             android:text="Medicação dada"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/medicacaoLabel"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="34dp" app:layout_constraintTop_toBottomOf="@+id/doencaNomeAtendimento"
-            android:layout_marginBottom="11dp" app:layout_constraintBottom_toTopOf="@+id/medicacaoAtendimento"/>
+            app:layout_constraintStart_toStartOf="@+id/doencaNomeAtendimento" android:layout_marginTop="17dp"
+            android:layout_marginStart="1dp"
+            app:layout_constraintTop_toBottomOf="@+id/doencaNomeAtendimento"/>
     <EditText
-            android:layout_width="209dp"
+            android:layout_width="0dp"
             android:layout_height="0dp"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/medicacaoAtendimento"
-            app:layout_constraintTop_toBottomOf="@+id/medicacaoLabel"
-            app:layout_constraintStart_toEndOf="@+id/medicacaoLabel" android:layout_marginBottom="21dp"
-            app:layout_constraintEnd_toEndOf="@+id/medicacaoLabel"
-            app:layout_constraintBottom_toTopOf="@+id/custoTextAtedimento"/>
+            app:layout_constraintTop_toBottomOf="@+id/doencaNomeAtendimento" android:layout_marginBottom="18dp"
+            app:layout_constraintEnd_toEndOf="@+id/doencaNomeAtendimento"
+            app:layout_constraintBottom_toTopOf="@+id/custoTextAtedimento"
+            app:layout_constraintStart_toStartOf="@+id/medicacaoLabel"/>
     <TextView
             android:text="Custo do Atendimento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/custoTextAtedimento"
             app:layout_constraintStart_toStartOf="@+id/medicacaoAtendimento"
-            app:layout_constraintTop_toBottomOf="@+id/medicacaoAtendimento" android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/medicacaoAtendimento" android:layout_marginBottom="14dp"
             app:layout_constraintBottom_toTopOf="@+id/custoTextAtedimento1"/>
     <EditText
-            android:layout_width="213dp"
+            android:layout_width="197dp"
             android:layout_height="0dp"
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/custoTextAtedimento1"
             app:layout_constraintStart_toStartOf="@+id/custoTextAtedimento"
-            app:layout_constraintTop_toBottomOf="@+id/custoTextAtedimento" android:layout_marginBottom="26dp"
+            app:layout_constraintTop_toBottomOf="@+id/custoTextAtedimento" android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toTopOf="@+id/obsAtendimento"/>
     <TextView
             android:text="Outras observações"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/obsAtendimento"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="34dp" app:layout_constraintTop_toBottomOf="@+id/custoTextAtedimento1"
-            android:layout_marginBottom="14dp" app:layout_constraintBottom_toTopOf="@+id/obstextAtendimento"/>
+            app:layout_constraintStart_toStartOf="@+id/custoTextAtedimento1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/custoTextAtedimento1" android:layout_marginBottom="218dp"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -103,10 +100,10 @@
             android:gravity="start|top"
             android:ems="10"
             android:id="@+id/obstextAtendimento"
-            app:layout_constraintTop_toBottomOf="@+id/obsAtendimento" android:layout_marginBottom="17dp"
+            app:layout_constraintTop_toBottomOf="@+id/criarAtedimentoLabel" android:layout_marginBottom="21dp"
             app:layout_constraintEnd_toEndOf="@+id/buttonCriarAtendimento"
             app:layout_constraintBottom_toTopOf="@+id/buttonCriarAtendimento"
-            app:layout_constraintStart_toStartOf="@+id/obsAtendimento" android:layout_marginEnd="18dp"
+            app:layout_constraintStart_toStartOf="@+id/obsAtendimento" android:layout_marginEnd="14dp"
     />
     <Button
             android:text="Criar"
@@ -114,8 +111,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/buttonCriarAtendimento"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/obstextAtendimento" android:layout_marginEnd="94dp"
-            android:layout_marginBottom="34dp"
+            app:layout_constraintTop_toBottomOf="@+id/obstextAtendimento" android:layout_marginEnd="44dp"
+            android:layout_marginBottom="32dp"
             app:layout_constraintEnd_toEndOf="parent"/>
 </android.support.constraint.ConstraintLayout>
 
